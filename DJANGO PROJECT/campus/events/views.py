@@ -15,7 +15,8 @@ from django.template.loader import render_to_string
 
 # Home page view
 def home(request):
-    events = Event.objects.filter(event_datetime__gte=timezone.now()).order_by('event_datetime')[:3]
+    # Filter events to show only those that are approved and have a date greater than or equal to the current time
+    events = Event.objects.filter(event_datetime__gte=timezone.now(), is_approved=True).order_by('event_datetime')[:3]
     return render(request, 'home.html', {'events': events})
 
 # Events page view
