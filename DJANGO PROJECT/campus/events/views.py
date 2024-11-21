@@ -22,7 +22,7 @@ def home(request):
 # Events page view
 def events(request):
     # Fetch only approved events and order them by event date and time
-    approved_events = Event.objects.filter(is_approved=True).order_by('event_datetime')
+    approved_events = Event.objects.filter(event_datetime__gte=timezone.now(), is_approved=True).order_by('event_datetime')
 
     # If no events are approved yet, you can display a message to the user
     if not approved_events:
