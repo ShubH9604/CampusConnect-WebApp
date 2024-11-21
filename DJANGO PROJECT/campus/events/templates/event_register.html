@@ -1,9 +1,10 @@
 {% extends 'layout.html' %}
 
 {% block content %}
-<h1 class="text-center mt-3 mb-3" style="color: #0d6efd;">Register for {{ event.title }}</h1>
-<div class="container mt-1 d-flex justify-content-center align-items-center" style="min-height: 80vh;">
-    <div class="w-50 p-4 rounded shadow" style="background-color: #000000; border: 1px solid #ffffff;">
+<h1 class="text-center mt-4 mb-4">Registration Form</h1>
+<div class="container mt-4 mb-4 d-flex justify-content-center align-items-center" style="min-height: 20vh;">
+    <div class="w-50 h-100 p-4 rounded shadow" style="background-color: #000000; border: 1px solid #ffffff;">
+        <h2 class="text-center mt-1 mb-4" style="color: #0d6efd;">{{ event.title }}</h2>
         <form method="POST">
             {% csrf_token %}
             <div class="mb-3">
@@ -15,12 +16,13 @@
                 {{ form.email }}
             </div>
             <div class="mb-3">
-                <label for="id_phone" class="form-label fw-bold">Phone Number</label>
+                <label for="id_phone" class="form-label fw-bold">Phone</label>
                 {{ form.phone }}
             </div>
-            <button type="submit" class="btn btn-primary w-100">Register Now</button>
+            <div class="d-flex justify-content-center">
+                <button type="submit" class="btn btn-primary w-50 shadow-sm">Register Now</button>
+            </div>
         </form>
     </div>
 </div>
 {% endblock %}
-
