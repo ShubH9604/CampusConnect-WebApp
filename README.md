@@ -1,7 +1,7 @@
 # CampusConnect-WebApp
 
 ## CampusConnect
-CampusConnect is a comprehensive Event Management System built with **Django** that streamlines the creation, management, and approval of events within an organization or institution. It enhances collaboration between users and administrators through an intuitive interface and automated email notifications.
+CampusConnect is a comprehensive Event Management System built with **Django** that streamlines the creation, management, and approval of events within an organization or institution. It enhances collaboration between users and administrators through an intuitive interface and automated email notifications. 
 
 ---
 
